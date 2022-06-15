@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1.25px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #272727;
+}
+
+h1 {
+  color: #ed454c;
+  text-align: center;
+  font-weight: 500;
+  margin: 35px 20px 20px;
+}
+
+/* ---------------------------------------- */
+
+#tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 40px;
+}
+
+#tags p {
+  color: #fff;
+  border: 1px solid #ed454c;
+  margin: 7px;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+#tags p.active {
+  background-color: #ed454c;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 22px;
+  }
+  #tags p {
+    font-size: 10px;
+    margin: 5px 2px;
+    padding: 6px 10px;
+  }
+}
+
+/* ---------------------------------------- */
+
+main {
+  padding: 40px 5vw;
+  display: grid;
+  gap: 4vw;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+main .single-div {
+  box-shadow: 0 0 10px 1px #424040;
+  padding-bottom: 60px;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.single-div img {
+  width: 100%;
+  margin: 0;
+  height: 230px;
+}
+
+.single-div * {
+  margin: 6px 10px;
+  line-height: 140%;
+}
+
+.single-div h2 {
+  color: #ed454c;
+  font-size: 18px;
+}
+
+.single-div .description {
+  color: #fff;
+  font-size: 15px;
+}
+
+.single-div .author,
+.single-div .tags {
+  color: rgb(124, 124, 124);
+  font-size: 12.5px;
+}
+
+.single-div button {
+  background-color: #ed454c;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 3rem;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 7vw;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .single-div {
+    margin-bottom: 20px;
+  }
+  .single-div h2 {
+    font-size: 15px;
+  }
+  .single-div .description {
+    font-size: 11px;
+  }
+  .single-div .author,
+  .single-div .tags {
+    font-size: 10px;
+  }
+}
+
+/* ---------------------------------------- */
+
+i {
+  color: #fff;
+}
+
+aside {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside i {
+  margin: 8px;
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  aside {
+    display: none;
+  }
+}
+
+/* ---------------------------------------- */
+
+#btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5vw 40px;
+}
+
+#btns button {
+  border: none;
+  background-color: inherit;
+  color: #fff;
+  cursor: pointer;
+}
+
+#btns button i {
+  margin: 0 10px;
+}
+
+#btns div button {
+  margin: 0 10px;
+}
+
+#btns button.active {
+  color: #ed454c;
+  transform: scale(1.7);
+}
+
+#loadMore {
+  color: #ed454c;
+  text-align: center;
+  display: none;
+}
+
+#loadMore i {
+  color: #ed454c;
+  display: block;
+  margin: 20px;
+}
+
+@media (max-width: 640px) {
+  #btns {
+    display: none;
+  }
+  #loadMore {
+    display: block;
+  }
+}
+
+/* ---------------------------------------- */
