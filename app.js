@@ -62,6 +62,7 @@ function displayArticles(page) {
         </div>`;
   }
 }
+
 createBtns(1);
 displayArticles(page);
 
