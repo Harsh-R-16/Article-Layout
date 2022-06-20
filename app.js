@@ -46,9 +46,7 @@ function displayArticles(page) {
   let len = requiredArticles.length;
   for (let i = (page - 1) * 6; i < (page - 1) * 6 + 6; i++) {
     main.innerHTML += `<div class="single-div">
-            <img src="https://source.unsplash.com/random?sig=${
-              Math.random() * 1000
-            }" alt="">
+            <img src=${requiredArticles[i % len].img} alt="">
             <h2>${i + 1}. ${requiredArticles[i % len].title}</h2>
             <p class="author">Author: ${
               requiredArticles[i % len].author
