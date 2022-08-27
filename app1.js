@@ -22,11 +22,12 @@ sections[0].addEventListener("click", function (e) {
   console.log(div);
   div.classList.add("fixed");
   let p = document.createElement("p");
+
   p.innerHTML = "";
   article.appendChild(div);
 
   div.innerHTML += ` <article class="article">
-                                <p>frequency</p>
+                                <p class="">frequency</p>
                                 <div>
                                     <p>Every <button>Add</button> <i class='fa fa-trash'></i>
                                     </p>

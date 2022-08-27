@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section></section>
+
+    <script>
+        let section = document.querySelector("section")
+        function generateParas(num) {
+            for (let i = 0; i < num; i++) {
+                section.innerHTML += `<p>Hello</p>`
+            }
+            temp()
+
+        }
+
+        function temp() {
+            let paras = section.querySelectorAll("p")
+            // paras.forEach((i, index) => {
+            //     i.addEventListener("click", function () {
+            //         console.log(index + 1)
+            //     })
+            // })
+
+            for (var i = 0; i < paras.length; i++) {
+                paras[i].addEventListener("click", function () {
+                    function print(num) {
+                        console.log(num)
+                    }
+                    print(i + 1)
+                })
+            }
+
+        }
+
+        // section.addEventListener("click", function (e) {
+        //     console.log(e.target)
+
+        // })
+        function printNum(num) {
+            console.log(num)
+        }
+        generateParas(10)
+    </script>
+</body>
+
+</html>

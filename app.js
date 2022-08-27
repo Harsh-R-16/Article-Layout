@@ -100,3 +100,5 @@ window.addEventListener("resize", function () {
 loadMore.addEventListener("click", function () {
   displayArticles(++page);
 });
+
+// https://article-layout.netlify.app/
